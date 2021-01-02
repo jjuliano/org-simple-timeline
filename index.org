@@ -1,1 +1,4 @@
-1. [[file:example.html]] ([[file:example.org][org]])
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:nil
+
+1. [[file:example-1.html][example-1.html]] -- horizontal timeline example ([[file:example-1.org][org]])
+2. [[file:example-2.html][example-2.html]] -- vertical timeline example ([[file:example-2.org][org]])
