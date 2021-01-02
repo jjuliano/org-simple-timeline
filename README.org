@@ -18,4 +18,4 @@ To test it, run:
 
 * Example
 
-See this [[https://jjuliano.github.io/org-timeline/][page]] for examples
+See this [[https://jjuliano.github.io/org-simple-timeline/][page]] for examples
