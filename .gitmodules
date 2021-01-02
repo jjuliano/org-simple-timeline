@@ -1,0 +1,3 @@
+[submodule "modules/timeline"]
+	path = modules/timeline
+	url = git@github.com:squarechip/timeline.git
