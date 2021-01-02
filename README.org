@@ -5,6 +5,7 @@ This library implements the Org-mode back-end exporter for HTML Timeline (https:
 * Installation
 
 Download the timeline scripts from https://squarechip.github.io/timeline/
+
 Then copy the files relative to your html file.
 
 The default ('org-timeline-source-url') is set to "modules/timeline/dist".
@@ -17,4 +18,4 @@ To test it, run:
 
 * Example
 
-See this page for example
+See this [[https://jjuliano.github.io/org-timeline/][page]] for examples
