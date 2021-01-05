@@ -42,6 +42,8 @@
 ;; on how this exporter works.
 
 (require 'ox-html)
+;;; Code:
+
 (eval-when-compile (require 'cl))
 
 (org-export-define-derived-backend 'timeline 'html
@@ -88,7 +90,7 @@
     (template . org-timeline-template)))
 
 (defgroup org-export-timeline nil
-  "All options available for exporting org-mode to HTML Timeline"
+  "All options available for exporting org-mode to HTML Timeline."
   :tag "Org Export HTML Timeline"
   :group 'org-export-html)
 
@@ -108,38 +110,39 @@
   :type '(choice (const left) (const right)))
 
 (defcustom org-timeline-force-vertical-mode 600
-  "The viewport width value in which a horizontal mode will revert to vertical"
+  "The viewport width value in which a horizontal mode will revert to vertical."
   :group 'org-export-timeline
   :type 'integer)
 
 (defcustom org-timeline-start-index 0
-  "The starting item in horizontal mode"
+  "The starting item in horizontal mode."
   :group 'org-export-timeline
   :type 'integer)
 
 (defcustom org-timeline-visible-items 3
-  "The number of items visible in the screen in horizontal mode"
+  "The number of items visible in the screen in horizontal mode."
   :group 'org-export-timeline
   :type 'integer)
 
 (defcustom org-timeline-rtl-mode 'false
-  "Setting to enable RTL mode"
+  "Setting to enable RTL mode."
   :group 'org-export-timeline
   :type '(choice (const true) (const false)))
 
 (defcustom org-timeline-move-items 1
-  "The number of items will be moved when in horizontal mode"
+  "The number of items will be moved when in horizontal mode."
   :group 'org-export-timeline
   :type 'integer)
 
 (defcustom org-timeline-vertical-trigger "15%"
-  "The distance pixels in vertical mode on the bottom of the screen"
+  "The distance pixels in vertical mode on the bottom of the screen."
   :group 'org-export-timeline
   :type 'string)
 
 (defcustom org-timeline-source-url "modules/timeline/dist"
-  "The url directory which contains the HTML plugin subdirectory. Set the
-TIMELINE_SOURCE_URL property to override."
+  "The url directory which contains the HTML plugin subdirectory.
+
+Set the TIMELINE_SOURCE_URL property to override."
   :group 'org-export-timeline
   :type 'string)
 
@@ -147,9 +150,10 @@ TIMELINE_SOURCE_URL property to override."
   '((preamble  "div" "header")
     (content   "div" "content")
     (postamble "div" "footer"))
-  "Upon exporting the HTML, this alist will comprise of there section elements,
-where car for each entry is a 'preamble', 'context' or 'postamble', while the
-cdrs are element type and id.")
+  "Upon exporting the HTML, this alist will comprise of three section elements.
+
+The CAR for each entry is a 'preamble', 'context' or 'postamble', while the CDRs
+are element type and id.")
 
 (defcustom org-timeline-footer
 "<div style=\" padding-top: 2vw; padding-bottom: 2vw; text-align: center;\"></div>"
@@ -192,6 +196,7 @@ or an empty string."
                  (function :tag "Function (must return a string)")))
 
 (defun org-timeline--build-head (info)
+  "Builds the head from INFO containing the stylesheet and scripts."
   (let* ((dir (plist-get info :timeline-source-url))
          (css (or (plist-get info :timeline-css-file) "css/timeline.min.css")))
     (mapconcat 'identity
@@ -208,10 +213,15 @@ or an empty string."
        "/js/timeline.min.js' type='text/javascript'></script>")) "\n")))
 
 (defun org-timeline--build-meta-info (info)
+  "Builds the meta information from INFO when exporting to HTML."
   (concat
    (org-html--build-meta-info info)))
 
 (defun org-timeline-headline (headline contents info)
+  "Builds the outer and inner class for timeline.
+HEADLINE is the outer class, CONTENTS and INFO are the contents of the inner
+class."
+
   (let ((org-html-toplevel-hlevel 1)
         (class (or (org-element-property :HTML_CONTAINER_CLASS headline) ""))
         (level (org-export-get-relative-level headline info)))
