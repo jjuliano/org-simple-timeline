@@ -261,7 +261,11 @@ holding export options."
       (org-html--build-head info)
       "</head>"
       "<body>"
+      "<header class=\"header\">"
       (org-html--build-pre/postamble 'preamble info)
+      "</header>"
+      "<section class=\"section\">"
+      "<div class=\"container\">"
       (format
        "<div class=\"timeline\" data-mode=\"%s\"
                                 data-force-vertical-mode=\"%s\"
@@ -287,7 +291,11 @@ holding export options."
       "</div>"
       "</div>"
       "</div>"
+      "</div>"
+      "</section>"
+      "<footer class=\"footer\">"
       (org-html--build-pre/postamble 'postamble info)
+      "</footer>"
       "<script>timeline(document.querySelectorAll('.timeline'));</script>"
       "</body>"
       "</html>\n") "\n")))
