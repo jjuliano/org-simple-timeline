@@ -1,13 +1,23 @@
+#+TITLE: ox-timeline horizontal example
+#+DESCRIPTION: Org-mode export for HTML timeline in horizontal mode
 #+OPTIONS: num:nil
+#+TIMELINE_HEADER: <h2>Lorem ipsum dolor sit amet</h2>
+#+TIMELINE_HEADER: <p>Integer dignissim neque condimentum lacus
+#+TIMELINE_HEADER: dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing
+#+TIMELINE_HEADER: elit.</p>
+#+TIMELINE_FOOTER: <h2>Lorem ipsum dolor sit amet</h2>
+#+TIMELINE_FOOTER: <p>Integer dignissim neque condimentum lacus
+#+TIMELINE_FOOTER: dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing
+#+TIMELINE_FOOTER: elit.</p>
+#+HTML_HEAD: <link href="css/style.min.css" rel="stylesheet">
+#+TIMELINE_MODE:  horizontal
+#+TIMELINE_FORCE_VERTICAL_MODE: 800
+#+TIMELINE_VISIBLE_ITEMS: 4
 
 * 2020
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
 condimentum lacus dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing
 elit.
-- item1
-- item2
-- item3
-
 * 2018
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
 condimentum lacus dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing
