@@ -44,8 +44,6 @@
 (require 'ox-html)
 ;;; Code:
 
-(eval-when-compile (require 'cl))
-
 (org-export-define-derived-backend 'timeline 'html
   :menu-entry
   '(?T "Export to HTML Timeline"
