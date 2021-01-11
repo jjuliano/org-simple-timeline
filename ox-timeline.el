@@ -3,7 +3,10 @@
 ;; Copyright (C) 2021-2022  Joel Bryan Juliano
 
 ;; Author: Joel Bryan Juliano <joelbryan dot juliano at gmail dot com>
-;; Keywords: timeline, hypermedia, HTML Timeline
+;; URL: https://github.com/jjuliano/org-simple-timeline
+;; Package-Requires: ((emacs "24.4"))
+;; Package-Version: 1.0.0
+;; Keywords: simple timeline, timeline, hypermedia, HTML Timeline
 
 ;; This file is not part of GNU Emacs.
 
@@ -244,8 +247,7 @@ holding export options."
                :html-divs
                (if (equal "li" (plist-get info :html-container))
                    (cons '(content "ol" "content") org-timeline--divs)
-                 org-timeline--divs)
-               )))
+                 org-timeline--divs))))
 
     (mapconcat
      'identity
