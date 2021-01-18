@@ -248,11 +248,10 @@ holding export options."
                    (cons '(content "ol" "content") org-timeline--divs)
                  org-timeline--divs))))
 
-    (mapconcat
-     'identity
+    (mapconcat #'identity
      (list
       (org-html-doctype info)
-      (format "<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"%s\" xml:lang=\"%s\">"
+      (format "<html xmlns=\"https://www.w3.org/1999/xhtml\" lang=\"%s\" xml:lang=\"%s\">"
               (plist-get info :language) (plist-get info :language))
       "<head>"
       (org-timeline--build-meta-info info)
