@@ -201,12 +201,10 @@ or an empty string."
   "Builds the head from INFO containing the stylesheet and scripts."
   (let* ((dir (plist-get info :timeline-source-url))
          (css (or (plist-get info :timeline-css-file) "css/timeline.min.css")))
-    (mapconcat 'identity
+    (mapconcat #'identity
      (list (mapconcat
        (lambda (list)
-         (format
-          (concat
-           "<link rel='stylesheet' href='%s/css/%s' type='text/css' />")
+         (format "<link rel='stylesheet' href='%s/css/%s' type='text/css' />"
           dir (nth 0 list)))
        (list
         '("timeline.min.css")) "\n")
