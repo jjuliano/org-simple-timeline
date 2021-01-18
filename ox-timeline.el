@@ -44,8 +44,9 @@
 ;; in an Org mode buffer.  See ox.el and ox-html.el for more details
 ;; on how this exporter works.
 
-(require 'ox-html)
 ;;; Code:
+
+(require 'ox-html)
 
 (org-export-define-derived-backend 'timeline 'html
   :menu-entry
