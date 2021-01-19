@@ -10,6 +10,8 @@ Then copy the files relative to your html file.
 
 The default ('org-timeline-source-url') is set to "modules/timeline/dist".
 
+=ox-timeline= is available on [[https://melpa.org/#/ox-timeline][MELPA]].
+
 * Usage
 
 To test it, run:
