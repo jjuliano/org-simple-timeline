@@ -1,4 +1,5 @@
-* README
+* Ox-timeline for Emacs
+[[https://melpa.org/#/ox-timeline][file:https://melpa.org/packages/ox-timeline-badge.svg]]
 
 This library implements the Org-mode back-end exporter for HTML Timeline (https://squarechip.github.io/timeline/).
 
