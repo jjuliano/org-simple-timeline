@@ -5,7 +5,7 @@
 ;; Author: Joel Bryan Juliano <joelbryan dot juliano at gmail dot com>
 ;; URL: https://github.com/jjuliano/org-simple-timeline
 ;; Package-Requires: ((emacs "24.4"))
-;; Version: 1.0.0
+;; Version: 0.1.0
 ;; Keywords: simple timeline, timeline, hypermedia, HTML Timeline
 
 ;; This file is not part of GNU Emacs.
